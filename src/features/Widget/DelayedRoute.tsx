@@ -12,10 +12,10 @@ const statusMap = {
 export const DelayedRoute = ({data}: Props) => {
   const {status, name, via, distance, duration} = data;
   return (
-    <div className="border-t border-base-100 p-2">
+    <section title={name} className="border-t border-base-100 p-2">
       <div className="flex flex-row justify-start items-center gap-2">
         <div className={`${statusMap[status]} text-[0.5rem]`}>●</div>
-        <div className="opacity-80">{name}</div>
+        <h2 className="opacity-80">{name}</h2>
         <span className="opacity-60 text-xs ml-auto">
           {duration}
           <span className="ml-0.5">km</span>
@@ -32,6 +32,6 @@ export const DelayedRoute = ({data}: Props) => {
           <span className="text-xs ml-0.5">min</span>
         </span>
       </div>
-    </div>
+    </section>
   );
 };

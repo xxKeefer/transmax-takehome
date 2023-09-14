@@ -1,9 +1,15 @@
-const path = require('path');
+// eslint-disable-next-line node/no-unpublished-require
+const CracoAlias = require('craco-alias');
 
 module.exports = {
-  webpack: {
-    alias: {
-      '~': path.resolve(__dirname, 'src/'),
+  plugins: [
+    {
+      plugin: CracoAlias,
+      options: {
+        source: 'tsconfig',
+        baseUrl: './',
+        tsConfigPath: './tsconfig.json',
+      },
     },
-  },
+  ],
 };

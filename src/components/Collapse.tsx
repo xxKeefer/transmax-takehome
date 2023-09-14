@@ -18,6 +18,7 @@ export const Collapse = ({children, title}: Props) => {
     >
       <div
         className="font-medium text-sm uppercase px-4 py-2 flex justify-between "
+        role="button"
         onClick={() => setOpen(!open)}
       >
         <span className="opacity-80">{title}</span>
